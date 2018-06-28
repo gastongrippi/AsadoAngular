@@ -1,0 +1,8 @@
+<ul>
+	<app-item *ngFor="let asadoNew of asadoList" [asado] ="asadoNew" (elementAsado) = "showDetail($event)">
+	</app-item>
+</ul>
+<div *ngIf = "show">
+	{{asado.name}}
+	{{asado.price}}
+</div>
