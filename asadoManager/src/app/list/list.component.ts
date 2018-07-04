@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 	
 	asado = {};
-	show = true;
+	show = false;
 	asadoList = [
 
 	{

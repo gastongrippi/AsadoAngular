@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-item',
@@ -10,13 +11,17 @@ export class ItemComponent implements OnInit {
 	@Input () asado
 	@Output () elementAsado = new EventEmitter<String>();
 
-  constructor() { }
+  constructor( 
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
-  getAsadoInfo(asado) {
-  	this.elementAsado.emit(asado);
+  navigateToAsado(asado) {
+    //this.elementAsado.emit(asado);
+    this.router.navigate([`/asado/detalle/${asado.name}/${asado.price}`]);
   }
 
 }

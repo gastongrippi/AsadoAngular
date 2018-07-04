@@ -2,7 +2,7 @@
 	<app-item *ngFor="let asadoNew of asadoList" [asado] ="asadoNew" (elementAsado) = "showDetail($event)">
 	</app-item>
 </ul>
-<div *ngIf = "show">
-	{{asado.name}}
-	{{asado.price}}
-</div>
+<router-outlet></router-outlet>
+<!-- <ul *ngIf = "show">
+	El precio de {{asado.name}} es: {{asado.price}}
+</ul> -->
